@@ -1,0 +1,10 @@
+$font_heading : 'Lato', sans-serif;
+$font_text : 'Merriweather', serif;
+
+@mixin fontHeading() {
+    font-family : $font_heading;
+}
+
+@mixin fontText() {
+    font-family : $font_text;
+}

@@ -1,0 +1,8 @@
+$vendors : "-moz-", "-webkit-", "";
+// you can add other vendor prefixes or remove them without needing to change the mixin.
+
+@mixin vendors($property, $value) {
+    @each $vendor in $vendors {
+        #{$vendor}#{$property}: $value;
+    }
+}

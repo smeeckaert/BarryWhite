@@ -1,0 +1,61 @@
+// This a sass file used for the website demo you shouldn't import it in your projet
+@import "../barry";
+
+body {
+    background : #D96716;
+    padding    : 10px;
+}
+
+.container {
+    padding       : 10px;
+    background    : #fff;
+    margin-bottom : 20px;
+}
+
+.demo {
+
+    .separator-right, .separator-left, .separator-top, .separator-bottom {
+        border-color : #D96716;
+    }
+
+    &.row {
+        background    : #888;
+        margin-bottom : 10px;
+
+        .columns {
+            background : #BBB;
+
+            .content {
+                margin      : 10px 0;
+                background  : #FFF;
+                min-height  : 30px;
+                line-height : 30px;
+            }
+
+            &:nth-child(even) {
+                background : #DDD;
+                .content {
+                    background : #AAA;
+                }
+
+            }
+        }
+    }
+
+    .transition {
+        @include transition();
+
+        &:hover {
+            background : $primary;
+        }
+    }
+
+    .text-border {
+        @include text-border($primaryTrigger);
+        font-weight : 600;
+    }
+
+    &.box-shadow {
+        @include box-shadow(1px, 1px, 1px, 1px, rgba($primaryTrigger, .5));
+    }
+}

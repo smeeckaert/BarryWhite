@@ -1,0 +1,135 @@
+/* Gestion de la grille : gutter, padding, etc */
+.row {
+    position : relative;
+    display  : block;
+
+    &.large {
+        width     : 100%;
+        max-width : 100%;
+    }
+
+    &.no-margin {
+        margin : 0;
+    }
+
+    [class*="column"] + [class*="column"]:last-child {
+        float : left;
+    }
+
+    .column,
+    .columns {
+
+        &.no-padding-right {
+            padding-right : 0;
+
+            @media only screen and (max-width : $medium) {
+                padding-right                 : 10px;
+            }
+
+        }
+
+        &.no-padding-left {
+            padding-left : 0;
+
+            @media only screen and (max-width : $medium) {
+                padding-left                  : 10px;
+            }
+
+        }
+
+        &.no-padding {
+            @extend .no-padding-left;
+            @extend .no-padding-right;
+        }
+    }
+
+    &.small-gutter {
+
+        > .columns {
+            padding-left  : 10px;
+            padding-right : 10px;
+
+            img {
+                width : 100%;
+            }
+        }
+
+    }
+
+    &.micro-gutter {
+
+        .columns {
+            padding-left  : 5px;
+            padding-right : 5px;
+
+            img {
+                width : 100%;
+            }
+        }
+
+    }
+
+    &.no-gutter {
+
+        > .columns {
+            padding-left  : 0px;
+            padding-right : 0px;
+
+            img {
+                width : 100%;
+            }
+        }
+
+    }
+
+    .row {
+
+        &.small-gutter {
+            margin-left  : -10px;
+            margin-right : -10px;
+
+            > .row {
+                margin-left   : -10px;
+                margin-right  : -10px;
+                margin-bottom : 20px;
+            }
+
+            > .columns {
+                padding-left  : 10px;
+                padding-right : 10px;
+            }
+        }
+
+        &.micro-gutter {
+            margin-left  : -5px;
+            margin-right : -5px;
+
+            .row {
+                margin-left   : -5px;
+                margin-right  : -5px;
+                margin-bottom : 10px;
+            }
+
+            .columns {
+                padding-left  : 5px;
+                padding-right : 5px;
+            }
+        }
+
+        &.no-gutter {
+            margin-left  : 0px;
+            margin-right : 0px;
+
+            .row {
+                margin-left   : 0px;
+                margin-right  : 0px;
+                margin-bottom : 10px;
+            }
+
+            .columns {
+                padding-left  : 0px;
+                padding-right : 0px;
+            }
+        }
+    }
+}

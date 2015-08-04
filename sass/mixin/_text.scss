@@ -1,0 +1,3 @@
+@mixin text-border($color) {
+    text-shadow : 1px 1px 0px $color, -1px -1px 0px $color, 1px -1px 0px $color, -1px 1px 0px $color;
+}

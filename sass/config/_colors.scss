@@ -1,0 +1,11 @@
+// used for separator
+$lightgrey : #CDCDCD;
+
+$textColor : #222222;
+
+$headingColor : $textColor;
+
+$primary : #ff00ff;
+$primaryTrigger : lighten($primary, 20);
+$secondary : #00ffff;
+$secondaryTrigger : lighten($secondary, 20);
