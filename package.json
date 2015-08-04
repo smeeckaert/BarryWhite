@@ -1,0 +1,9 @@
+{
+    "devDependencies": {
+        "grunt"                 : "~0.4.4",
+        "grunt-contrib-compass" : "~0.7.2",
+        "grunt-contrib-nodeunit": "~0.2.2",
+        "grunt-contrib-watch"   : "~0.6.1",
+        "grunt-csssplit"        : "^0.4.0"
+    }
+}
