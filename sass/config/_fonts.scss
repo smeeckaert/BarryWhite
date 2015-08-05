@@ -1,6 +1,13 @@
 $font_heading : 'Lato', sans-serif;
 $font_text : 'Merriweather', serif;
 
+// 12px
+$fontSizeSmall : 0.75rem;
+// 14px
+$fontSizeMedium : 0.875rem;
+// 16px
+$fontSizeLarge : 1rem;
+
 @mixin fontHeading() {
     font-family : $font_heading;
 }

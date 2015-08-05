@@ -1,0 +1,80 @@
+button,
+.button,
+input[type="submit"] {
+    padding     : 7px;
+    color       : $textColor;
+    font-family : $font_text;
+    font-size   : $fontSizeMedium;
+    font-weight : 600;
+    border      : 0;
+    margin      : 0;
+    outline     : none;
+    @include transition();
+
+    @each $color in $colorList {
+        $currentColorName : nth($color, 1);
+        $currentColorValue : nth($color, 2);
+        $currentColorTrigger : nth($color, 3);
+
+        &.#{$currentColorName} {
+            background-color : $currentColorValue;
+
+            &.inverted {
+                border-color : $currentColorValue;
+                color        : $currentColorValue;
+
+                &:hover {
+                    color            : $textColor;
+                    background-color : $currentColorTrigger;
+                }
+            }
+
+            &:hover {
+                background-color : $currentColorTrigger;
+                color            : $textColor;
+            }
+        }
+    }
+
+    @extend .input;
+
+    &.inverted {
+        background : none;
+        border     : 2px solid $inputColor;
+
+        &:hover {
+            color : $textColor;
+        }
+
+        &.disabled {
+            &:hover {
+                color      : $textColor;
+                background : none;
+            }
+        }
+    }
+
+    &.small {
+        font-size : $fontSizeSmall;
+        padding   : 7px;
+    }
+
+    &.thick {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+
+    &.large {
+        padding   : 12px;
+        font-size : $fontSizeLarge;
+    }
+
+    &.disabled {
+        color : $textColor;
+
+        &:hover {
+            background-color : $disabled;
+            color            : $textColor;
+        }
+    }
+}

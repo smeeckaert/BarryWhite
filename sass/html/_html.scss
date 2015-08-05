@@ -30,6 +30,10 @@ body {
                 background  : #FFF;
                 min-height  : 30px;
                 line-height : 30px;
+
+                &.padded {
+                    padding : 10px;
+                }
             }
 
             &:nth-child(even) {

@@ -1,9 +1,22 @@
 body {
     @include fontText();
-    color : $textColor;
+    color     : $textColor;
+    font-size : $fontSizeMedium;
 
     h1, h2, h3, h3, h4, h5 {
         color : $headingColor;
         @include fontHeading();
     }
+}
+
+.normal {
+    font-weight : 400;
+}
+
+.strong {
+    font-weight : 600;
+}
+
+.bold {
+    font-weight : 700;
 }
