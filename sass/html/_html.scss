@@ -42,6 +42,10 @@ body {
         }
     }
 
+    .horizontal-list {
+        @include horizontal-list(10px);
+    }
+
     .transition {
         @include transition();
 

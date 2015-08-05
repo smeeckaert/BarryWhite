@@ -1,0 +1,17 @@
+@mixin horizontal-list($margin : null) {
+    list-style-type : none;
+    margin          : 0;
+
+    li {
+        display : inline-block;
+
+        @if ($margin) {
+            margin-left : $margin;
+
+            &:first-child {
+                margin-left : 0;
+            }
+        }
+    }
+
+}
