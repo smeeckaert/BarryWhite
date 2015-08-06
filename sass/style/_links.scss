@@ -38,5 +38,31 @@ a {
                 width : 100%;
             }
         }
+
+        &.way-right {
+            &:after {
+                left : 100%;
+            }
+
+            &:hover {
+                &:after {
+                    left : 0;
+                }
+            }
+        }
+
+        &.way-middle {
+            &:after {
+                left  : 50%;
+                right : 50%;
+            }
+
+            &:hover {
+                &:after {
+                    left  : 0;
+                    right : 0;
+                }
+            }
+        }
     }
 }
