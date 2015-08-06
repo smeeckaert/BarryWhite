@@ -3,8 +3,10 @@
 @import "sh/shCore";
 @import "sh/shCoreDefault";
 
+$goldman : #F6AF08;
+
 body {
-    background : #D96716;
+    background : $goldman;
     padding    : 10px;
 }
 
