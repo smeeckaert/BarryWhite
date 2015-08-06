@@ -7,6 +7,10 @@
         color : $currentColorValue;
     }
 
+    .border-#{$currentColorName} {
+        border-color : $currentColorValue;
+    }
+
     .background-#{$currentColorName} {
         background-color : $currentColorValue;
     }
