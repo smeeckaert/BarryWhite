@@ -80,7 +80,7 @@
         margin-left   : 25px;
         margin-right  : 25px;
         border-radius : 100px;
-        @include vendors(animation, loader-dots 3s infinite ease-in-out);
+        @include vendors(animation, loader-dots 1.5s infinite ease-in-out);
 
         &:before, &:after {
             content          : "";
@@ -91,11 +91,11 @@
         }
 
         &:before {
-            @include vendors(animation, loader-dots-l 3s infinite ease-in-out);
+            @include vendors(animation, loader-dots-l 1.5s infinite ease-in-out);
         }
 
         &:after {
-            @include vendors(animation, loader-dots-r 3s infinite ease-in-out);
+            @include vendors(animation, loader-dots-r 1.5s infinite ease-in-out);
         }
 
         $sizes : 12, 20, 40;
