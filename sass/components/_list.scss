@@ -44,7 +44,9 @@ ul {
                 border-left  : 1px solid #000;
                 border-color : inherit;
             }
+
             li {
+
                 &:before {
                     content      : "";
                     display      : block;

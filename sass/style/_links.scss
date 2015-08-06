@@ -1,0 +1,42 @@
+a {
+    position     : relative;
+    color        : $primary;
+    @include transition();
+    border-color : $primaryTrigger;
+    display      : inline-block;
+
+    &:hover, &:active, &:focus, &:visited {
+        color : $primaryTrigger;
+    }
+
+    &.underline {
+        text-decoration : underline;
+    }
+
+    &.hoverline {
+        &:hover {
+            text-decoration : underline;
+        }
+    }
+
+    &.borderline {
+
+        &:after {
+            position      : absolute;
+            width         : 0%;
+            content       : " ";
+            display       : block;
+            margin        : auto;
+            margin-top    : -2px;
+            border-bottom : 1px solid #000;
+            border-color  : inherit;
+            @include transition();
+        }
+
+        &:hover {
+            &:after {
+                width : 100%;
+            }
+        }
+    }
+}
