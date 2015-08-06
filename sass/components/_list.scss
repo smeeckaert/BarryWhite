@@ -1,5 +1,6 @@
 ul {
-    font-size : $fontSizeMedium;
+    font-size    : $fontSizeMedium;
+    border-color : $inputColor;
 
     &.no-style {
         list-style-type : none;
@@ -13,6 +14,71 @@ ul {
             &:before {
                 content      : "› ";
                 margin-right : 5px;
+            }
+        }
+    }
+
+    &.tree {
+
+        list-style-type : none;
+        margin          : 0;
+        padding         : 0;
+
+        ul {
+            margin-left     : 10px;
+            position        : relative;
+            list-style-type : none;
+            margin          : 0;
+            padding         : 0;
+            border-color    : inherit;
+
+            &:before {
+                content      : "";
+                display      : block;
+                width        : 0;
+                position     : absolute;
+                top          : 0;
+                bottom       : 0;
+                left         : 0;
+                border-color : inherit;
+                border-left  : 1px solid #000;
+                border-color : inherit;
+            }
+            li {
+                &:before {
+                    content      : "";
+                    display      : block;
+                    width        : 8px;
+                    height       : 0;
+                    border-top   : 1px solid #000;
+                    border-color : inherit;
+                    position     : absolute;
+                    top          : 12px;
+                    left         : 0;
+                }
+
+                &:last-child:before {
+                    background-color : #FFF;
+                    height           : auto;
+                    top              : 10px;
+                    bottom           : 0;
+                }
+            }
+        }
+
+        li {
+            margin       : 0;
+            padding      : 3px 12px;
+            font-weight  : normal;
+            position     : relative;
+            border-color : inherit;
+
+            a {
+                position : relative;
+
+                &:hover + ul li a {
+                    @extend a:hover;
+                }
             }
         }
     }
