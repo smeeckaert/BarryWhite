@@ -16,9 +16,20 @@ body {
     margin-bottom : 20px;
 }
 
+.title {
 
-h1.title {
-    font-weight : 600;
+    h1.title {
+        font-weight : 600;
+    }
+
+    blockquote {
+        float      : right;
+        border     : none;
+        color      : $textColor;
+        font-style : italic;
+        padding    : 0;
+        margin     : 0;
+    }
 }
 
 .demo {
