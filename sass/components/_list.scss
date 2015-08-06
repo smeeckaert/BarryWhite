@@ -1,0 +1,28 @@
+ul {
+    font-size : $fontSizeMedium;
+
+    &.no-style {
+        list-style-type : none;
+        margin          : 0;
+    }
+
+    &.arrow {
+        @extend .no-style;
+
+        li {
+            &:before {
+                content      : "› ";
+                margin-right : 5px;
+            }
+        }
+    }
+
+    &.small-bullet {
+        li {
+
+            &:before {
+                font-size : $fontSizeSmall;
+            }
+        }
+    }
+}
