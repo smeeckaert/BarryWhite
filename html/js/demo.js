@@ -8,7 +8,7 @@ $(document).ready(function () {
             var sources = $content.html().trim();
             if (sources.length) {
 
-                var $pre = $("<pre/>").html(htmlEncode(sources)).addClass("brush: xml");
+                var $pre = $("<pre/>").html(htmlEncode(sources).replace(/^ +/gm, '')).addClass("brush: xml");
                 var $newBtn = $source.clone(true);
                 $newBtn.find('.src-container').append($pre);
                 $newBtn.removeClass('hidden');
@@ -20,8 +20,8 @@ $(document).ready(function () {
 
     SyntaxHighlighter.all();
 
-    $('body').on('click', '.source', function () {
-        $(this).toggleClass('active');
+    $('body').on('click', '.source button', function () {
+        $(this).parent().toggleClass('active');
     });
 
     function htmlEncode(value) {
