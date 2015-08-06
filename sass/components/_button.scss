@@ -9,6 +9,7 @@ input[type="submit"] {
     border      : 0;
     margin      : 0;
     outline     : none;
+    text-align  : left;
     @include transition();
 
     @each $color in $colorList {
@@ -23,13 +24,13 @@ input[type="submit"] {
                 border-color : $currentColorValue;
                 color        : $currentColorValue;
 
-                &:hover {
+                &:hover, &:focus, &:active {
                     color            : $textColor;
                     background-color : $currentColorTrigger;
                 }
             }
 
-            &:hover {
+            &:hover, &:focus, &:active {
                 background-color : $currentColorTrigger;
                 color            : $textColor;
             }
@@ -67,6 +68,24 @@ input[type="submit"] {
     &.large {
         padding   : 12px;
         font-size : $fontSizeLarge;
+    }
+
+    .title {
+        display     : inline-block;
+        max-width   : 0;
+        overflow    : hidden;
+        float       : right;
+        white-space : nowrap;
+        text-wrap   : none;
+        @include transition(#{max-width, margin-left});
+    }
+
+    &:hover {
+        .title {
+            margin-left : .2em;
+            height      : auto;
+            max-width   : 100px;
+        }
     }
 
     &.disabled {
