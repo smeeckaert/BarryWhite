@@ -1,0 +1,44 @@
+.tag {
+    color      : $white;
+    padding    : 3px 10px;
+    text-align : center;
+    background : $inputColor;
+    @include border-radius(2px);
+    position   : relative;
+    display    : inline-block;
+
+    &.bubble {
+        @include border-radius(100px);
+        display        : inline-block;
+        padding        : 0;
+        font-size      : $fontSizeSmall;
+        vertical-align : middle;
+
+        $sizes : 16, 20, 32, 64;
+
+        @each $size in $sizes {
+
+            $textSize : ($size - 8);
+            $lineHeight : ($size +2);
+            $halfSize : ($size / 2);
+            &.size-#{$size} {
+                width       : #{$size}px;
+                height      : #{$size}px;
+                line-height : #{$lineHeight}px;
+                font-size   : #{$textSize}px;
+
+                &.floating {
+                    top   : #{-$halfSize}px;
+                    right : #{-$halfSize}px;
+                }
+            }
+
+        }
+        @extend .size-16;
+    }
+
+    &.floating {
+        position : absolute;
+        z-index  : 2;
+    }
+}

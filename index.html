@@ -378,91 +378,159 @@
 
         <h2>Lists</h2>
 
-        <h3>no-style</h3>
+        <div>
+            <h3>no-style</h3>
 
-        <div class="row demo">
-            <div class="columns ">
-                <div class="content padded">
+            <div class="row demo">
+                <div class="columns ">
+                    <div class="content padded">
 
-                    <ul class="no-style">
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                    </ul>
+                        <ul class="no-style">
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>arrow</h3>
+
+            <div class="row demo">
+                <div class="columns ">
+                    <div class="content padded">
+
+                        <ul class="arrow">
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>tree</h3>
+
+            <div class="row demo">
+                <div class="columns ">
+                    <div class="content padded">
+
+                        <ul class="tree border-primary">
+                            <li>
+                                <a>Item</a>
+                                <ul>
+                                    <li>
+                                        <a>Item</a>
+                                        <ul>
+                                            <li>
+                                                <a>Item</a>
+                                            </li>
+                                            <li>
+                                                <a>Item</a>
+                                            </li>
+                                            <li>
+                                                <a>Item</a>
+                                            </li>
+                                            <li>
+                                                <a>Item</a>
+                                                <ul>
+                                                    <li>
+                                                        <a>Item</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>Item</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a>Item</a>
+                                        <ul>
+                                            <li>
+                                                <a>Item</a>
+                                            </li>
+                                            <li>
+                                                <a>Item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <h3>arrow</h3>
 
-        <div class="row demo">
-            <div class="columns ">
-                <div class="content padded">
-
-                    <ul class="arrow">
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h3>tree</h3>
-
-        <div class="row demo">
-            <div class="columns ">
-                <div class="content padded">
-
-                    <ul class="tree border-primary">
-                        <li>
-                            <a>Item</a>
-                            <ul>
-                                <li>
-                                    <a>Item</a>
-                                    <ul>
-                                        <li>
-                                            <a>Item</a>
-                                        </li>
-                                        <li>
-                                            <a>Item</a>
-                                        </li>
-                                        <li>
-                                            <a>Item</a>
-                                        </li>
-                                        <li>
-                                            <a>Item</a>
-                                            <ul>
-                                                <li>
-                                                    <a>Item</a>
-                                                </li>
-                                                <li>
-                                                    <a>Item</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a>Item</a>
-                                    <ul>
-                                        <li>
-                                            <a>Item</a>
-                                        </li>
-                                        <li>
-                                            <a>Item</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
+</div>
+
+
+<div>
+    <h2>Tags</h2>
+
+    <div class="row demo">
+        <div class="columns">
+            <div class="content padded">
+                <span class="tag text-text">My tag adsf </span>
+                <span class="tag background-primary text-text">My tag</span>
+                <span class="tag background-secondary text-text">My tag</span>
+                <span class="tag background-error text-text">My tag</span>
+            </div>
+        </div>
+    </div>
+
+    <h3>Bubble</h3>
+
+    <div class="row demo">
+        <div class="columns">
+            <div class="content padded">
+                <span class="tag bubble text-text">1</span>
+                <span class="tag bubble text-text size-20">9</span>
+                <span class="tag bubble text-text size-32">4</span>
+                <span class="tag bubble text-text size-64">7</span>
+                <span class="tag bubble background-primary size-20 text-text">4</span>
+                <span class="tag bubble background-secondary size-20 text-text">8</span>
+                <span class="tag bubble background-error size-20 text-text">7</span>
+            </div>
+        </div>
+    </div>
+
+    <h3>Floating Bubble</h3>
+
+    <div class="row demo">
+        <div class="columns">
+            <div class="content padded">
+                <span class="tag text-text">
+                    My tag with notif
+                    <span class="tag bubble floating text-white background-primary">
+                        1
+                    </span>
+                    </span>
+
+                <span class="tag text-text">
+                    Sample text
+
+                    <span class="tag bubble floating text-text background-error-trigger"><i
+                            class="fa fa-exclamation-triangle"></i>
+                    </span>
+
+                </span>
+                <button class="primary text-white">
+                    You've got mail
+
+                    <span class="tag bubble size-20 floating text-text background-secondary"><i
+                            class="fa fa-envelope"></i>
+                    </span>
+
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container">

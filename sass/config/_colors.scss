@@ -5,13 +5,15 @@ $textColor : #222222;
 
 $headingColor : $textColor;
 
+$white : #FFFFFF;
+
 $inputColor : #CCCCCC;
 $inputTrigger : darken($inputColor, 20);
 
 $primary : #00B4FF;
 $primaryTrigger : lighten($primary, 20);
 
-$secondary : #CCFF00;
+$secondary : #88D3AB;
 $secondaryTrigger : lighten($secondary, 20);
 
 $error : #F80909;
@@ -20,4 +22,4 @@ $errorTrigger : lighten($error, 20);
 $disabled : #999999;
 $disabledTrigger : lighten($disabled, 20);
 
-$colorList : ( ('input', $inputColor, $inputTrigger), ('primary', $primary, $primaryTrigger), ('secondary', $secondary, $secondaryTrigger), ('error', $error, $errorTrigger), ('disabled', $disabled, $disabledTrigger) );
+$colorList : ( ('white', $white, $white), ('text', $textColor, $textColor), ('input', $inputColor, $inputTrigger), ('primary', $primary, $primaryTrigger), ('secondary', $secondary, $secondaryTrigger), ('error', $error, $errorTrigger), ('disabled', $disabled, $disabledTrigger) );

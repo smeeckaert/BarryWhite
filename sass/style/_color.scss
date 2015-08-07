@@ -2,16 +2,29 @@
 
     $currentColorName : nth($color, 1);
     $currentColorValue : nth($color, 2);
+    $currentColorTrigger : nth($color, 3);
 
     .text-#{$currentColorName} {
         color : $currentColorValue;
+    }
+
+    .text-#{$currentColorName}-trigger {
+        color : $currentColorTrigger;
     }
 
     .border-#{$currentColorName} {
         border-color : $currentColorValue;
     }
 
+    .border-#{$currentColorName}-trigger {
+        border-color : $currentColorTrigger;
+    }
+
     .background-#{$currentColorName} {
         background-color : $currentColorValue;
+    }
+
+    .background-#{$currentColorName}-trigger {
+        background-color : $currentColorTrigger;
     }
 }
