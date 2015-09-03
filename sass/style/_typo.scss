@@ -3,9 +3,18 @@ body {
     color     : $textColor;
     font-size : $fontSizeMedium;
 
-    h1, h2, h3, h3, h4, h5 {
-        color : $headingColor;
-        @include fontHeading();
+}
+
+h1, h2, h3, h3, h4, h5 {
+    color : $headingColor;
+    @include fontHeading();
+}
+
+$headings : (1, 2, 3, 4, 5);
+
+@each $size in $headings {
+    .h#{$size} {
+        @extend h#{$size};
     }
 }
 
