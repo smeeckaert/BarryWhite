@@ -1,0 +1,65 @@
+.absolute {
+    position : absolute;
+}
+
+$yPositions : (
+    ('top'
+        (
+         ('top', 0),
+         ('','')
+        )
+    ),
+    ('center'
+        (
+            ('top', 50%),
+         ('transform',translateY(-50%))
+        )
+    ),
+    ('bottom'
+        (
+            ('bottom', 0),
+         ('','')
+        )
+    )
+);
+
+$xPositions : (
+    ('left'
+        (
+            ('left', 0),
+         ('','')
+        )
+    ),
+    ('center'
+        (
+            ('left', 50%),
+         ('transform',translateX(-50%))
+        )
+    ),
+    ('right'
+        (
+            ('right', 0),
+             ('','')
+        )
+    )
+);
+
+@each $yPos in $yPositions {
+    $yName : nth($yPos, 1);
+    $yStyle : nth($yPos, 2);
+
+    @each $xPos in $xPositions {
+        $xName : nth($xPos, 1);
+        $xStyle : nth($xPos, 2);
+
+        .#{$yName}-#{$xName} {
+            @include prop($yStyle);
+            @include prop($xStyle);
+        }
+    }
+}
+
+.center-center, .center {
+    @extend .center-center;
+    transform : translate(-50%, -50%);
+}

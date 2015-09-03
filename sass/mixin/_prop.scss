@@ -1,0 +1,10 @@
+@mixin prop($listProp) {
+    @each $prop in $listProp {
+        $propName : nth($prop, 1);
+        $propvalue : nth($prop, 2);
+        @if $propName != ''
+        {
+            #{$propName} : $propvalue;
+        }
+    }
+}
