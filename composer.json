@@ -1,11 +1,12 @@
 {
-    "name": "smeeckaert/jjg",
+    "name"       : "smeeckaert/jjg",
     "description": "Bootstrap CSS over Foundation",
-    "authors": [
+    "license"    : "AGPL-3.0",
+    "authors"    : [
         {
-            "name": "Martin Smeeckaert",
+            "name" : "Martin Smeeckaert",
             "email": "martin@smeeckaert.com"
         }
     ],
-    "require": { }
+    "require"    : { }
 }
