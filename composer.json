@@ -1,11 +1,11 @@
 {
-    "name"             : "smeeckaert/jjg",
-    "description"      : "Bootstrap CSS over Foundation",
-    "authors"          : [
+    "name": "smeeckaert/jjg",
+    "description": "Bootstrap CSS over Foundation",
+    "authors": [
         {
-            "name" : "Martin Smeeckaert",
+            "name": "Martin Smeeckaert",
             "email": "martin@smeeckaert.com"
         }
     ],
-    "minimum-stability": "dev"
+    "require": {}
 }
