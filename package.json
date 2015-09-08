@@ -1,5 +1,14 @@
 {
-    "devDependencies": {
+    "name"             : "smeeckaert/jjg",
+    "description"      : "Bootstrap CSS over Foundation",
+    "authors"          : [
+        {
+            "name" : "Martin Smeeckaert",
+            "email": "martin@smeeckaert.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "devDependencies"  : {
         "grunt"                 : "~0.4.4",
         "grunt-contrib-compass" : "~0.7.2",
         "grunt-contrib-nodeunit": "~0.2.2",
